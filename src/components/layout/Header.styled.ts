@@ -13,6 +13,9 @@ export const Navbar = styled.nav`
   min-height: 60px;
   align-items: center;
   background-color: ${colors.shyGray};
+  position: fixed;
+  top: 0;
+  width: 80%;
 `;
 
 export const NavContainer = styled.div`

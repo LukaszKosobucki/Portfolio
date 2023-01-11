@@ -19,3 +19,8 @@ export const FooterInfoBlock = styled.a`
   align-items: center;
   gap: 0.6rem;
 `;
+
+export const IconBlock = styled.img`
+  height: 36px;
+  width: 36px;
+`;

@@ -3,8 +3,8 @@ import styled, { createGlobalStyle } from "styled-components";
 export const typography = {
   fontSize: "16px",
   fontFamily: "Oxygen",
-  paragraphSmall: {
-    fontSize: "0.75rem",
+  paragraphBase: {
+    fontSize: "1rem",
     fontWeight: 400,
     lineHeight: "175%",
   },
@@ -57,6 +57,11 @@ export const Heading5 = styled.h5`
   font-weight: ${typography.heading5.fontWeight};
   line-height: ${typography.heading5.lineHeight};
 `;
+export const ParagraphBase = styled.p`
+  font-size: ${typography.paragraphBase.fontSize};
+  font-weight: ${typography.paragraphBase.fontWeight};
+  line-height: ${typography.paragraphBase.lineHeight};
+`;
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -69,7 +74,11 @@ export const GlobalStyle = createGlobalStyle`
         font-family: ${typography.fontFamily};
         overflow-x: clip;
         background-color: ${colors.shyGray};
-        font-size: 16px
+        font-size: 16px;
+    }
+    
+    html {
+        scroll-behavior: smooth;
     }
 
     #root {
@@ -79,6 +88,5 @@ export const GlobalStyle = createGlobalStyle`
     a:active, a:link,a:visited ,a:hover  {
         color: inherit;
         text-decoration: none;
-
     }
 `;

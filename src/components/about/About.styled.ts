@@ -12,4 +12,5 @@ export const SectionContainer = styled.div`
   min-width: 50%;
   flex-direction: column;
   min-height: 100vh;
+  scroll-margin-top: 4rem;
 `;

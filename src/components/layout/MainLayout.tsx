@@ -8,7 +8,7 @@ interface IChildren {
 
 const MainLayout = ({ children }: IChildren) => {
   return (
-    <Layout>
+    <Layout id="start">
       <Header />
       <Content>{children}</Content>
       <Footer />

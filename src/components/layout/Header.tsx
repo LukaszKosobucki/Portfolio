@@ -10,18 +10,18 @@ import {
 const Header = () => {
   return (
     <Navbar>
-      <LogoContainer href="#">
+      <LogoContainer href="#start">
         <Logo src="/logo_transparent.png" alt="logo" />
       </LogoContainer>
       <Title>Portfolio</Title>
       <NavContainer>
-        <a href="#">
-          <Heading5>Work</Heading5>
-        </a>
-        <a href="#">
+        <a href="#about">
           <Heading5>About</Heading5>
         </a>
-        <a href="#">
+        <a href="#work">
+          <Heading5>Work</Heading5>
+        </a>
+        <a href="#contact">
           <Heading5>Contact</Heading5>
         </a>
       </NavContainer>

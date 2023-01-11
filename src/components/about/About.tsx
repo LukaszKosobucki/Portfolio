@@ -3,10 +3,16 @@ import { Heading1Container, SectionContainer } from "./About.styled";
 
 const About = () => {
   return (
-    <SectionContainer>
+    <SectionContainer id="about">
       <Heading1Container>
         <Heading1>About</Heading1>
       </Heading1Container>
+      <section>
+        <img src="" alt="me" />
+        <div>
+          <p>some words</p>
+        </div>
+      </section>
     </SectionContainer>
   );
 };
