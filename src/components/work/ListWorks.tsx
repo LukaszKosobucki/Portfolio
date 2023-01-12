@@ -4,9 +4,9 @@ import Work from "./Work";
 
 const ListOfWorks = [
   {
-    title: "Autumn Shop",
+    title: "Autumn Ecommerce Shop",
     description:
-      "The App was created during inner coroporate React Academy event dedicated for interns and fresh people.",
+      "The App was created during inner coroporate React Academy event dedicated for interns and fresh people. It still contains some minor bugs and some inperfections but those are related to the extra features that i wanted to test on my own beside the requirements of the Academy tutor.",
     tasks: [
       "Design creation using Figma",
       "Implementation using React with Typescript",
@@ -15,9 +15,11 @@ const ListOfWorks = [
       "Styling with Material UI self implemented theme",
       "State management using Context Provider as wrapper for the App",
     ],
-    photo: "/url/to/photo",
-    figma: "url",
-    github: "url",
+    photo: "/autumn-shop.png",
+    figma:
+      "https://www.figma.com/file/vyLTghHNuWUfzdDht9uptf/Portfolio?node-id=0%3A1&t=vhoGsX5HWBUlMme2-1",
+    github: "https://github.com/LukaszKosobucki/Autumn-Shop",
+    website: "#",
   },
 ];
 
@@ -28,7 +30,7 @@ const ListWorks = () => {
         <Heading1>Works</Heading1>
       </Heading1Container>
       {ListOfWorks.map((work) => (
-        <Work work={work}></Work>
+        <Work work={work} key={work.title}></Work>
       ))}
     </SectionContainer>
   );

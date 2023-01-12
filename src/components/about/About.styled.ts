@@ -13,4 +13,23 @@ export const SectionContainer = styled.div`
   flex-direction: column;
   min-height: 100vh;
   scroll-margin-top: 4rem;
+  align-items: center;
+`;
+
+export const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 90%;
+`;
+
+export const ImagesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+`;
+
+export const IconBlock = styled.img`
+  height: 50px;
+  width: 50px;
 `;

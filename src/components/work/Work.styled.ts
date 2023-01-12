@@ -23,6 +23,11 @@ export const PhotoContainer = styled.div`
   border-right: 1px solid ${colors.shyBlack};
 `;
 
+export const Photo = styled.img`
+  max-height: 500px;
+  max-width: 400px;
+`;
+
 export const ProjectInfoBox = styled.div`
   display: flex;
   flex-direction: column;
