@@ -17,7 +17,7 @@ const ListOfWorks = [
     ],
     photo: "/autumn-shop.png",
     figma:
-      "https://www.figma.com/file/vyLTghHNuWUfzdDht9uptf/Portfolio?node-id=0%3A1&t=vhoGsX5HWBUlMme2-1",
+      "https://www.figma.com/file/cT9fEtevElnWMWqEQT3eSd/14.10.2022-(deadline)---ecommerce-app?node-id=1%3A609&t=gAsKMyFt9JSl9mNb-1",
     github: "https://github.com/LukaszKosobucki/Autumn-Shop",
     website: "#",
   },

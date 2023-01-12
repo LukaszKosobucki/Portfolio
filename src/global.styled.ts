@@ -3,10 +3,16 @@ import styled, { createGlobalStyle } from "styled-components";
 export const typography = {
   fontSize: "16px",
   fontFamily: "Oxygen",
+
   paragraphBase: {
     fontSize: "1rem",
     fontWeight: 400,
     lineHeight: "175%",
+  },
+  paragraphLarge: {
+    fontSize: "1.5rem",
+    fontWeight: 400,
+    lineHeight: "150%",
   },
   heading1: {
     fontSize: "3rem",
@@ -61,6 +67,11 @@ export const ParagraphBase = styled.p`
   font-size: ${typography.paragraphBase.fontSize};
   font-weight: ${typography.paragraphBase.fontWeight};
   line-height: ${typography.paragraphBase.lineHeight};
+`;
+export const ParagraphLarge = styled.div`
+  font-size: ${typography.paragraphLarge.fontSize};
+  font-weight: ${typography.paragraphLarge.fontWeight};
+  line-height: ${typography.paragraphLarge.lineHeight};
 `;
 
 export const GlobalStyle = createGlobalStyle`

@@ -5,7 +5,9 @@ import {
   Heading1Container,
   IconBlock,
   ImagesContainer,
+  PhotoBlock,
   SectionContainer,
+  TextBlock,
 } from "./About.styled";
 
 const listOfIcons = [
@@ -32,24 +34,29 @@ const About = () => {
       </Heading1Container>
       <ContentContainer>
         <ImagesContainer>
-          <img
-            src="/przystojniak.jpg"
-            alt="me"
-            style={{ width: "200px", height: "200px", borderRadius: "50%" }}
-          />
+          <PhotoBlock src="/przystojniak.jpg" alt="me" />
+
           {listOfIcons.map((icon) => (
             <IconBlock src={"/icons" + icon} alt="" />
           ))}
+          <FooterInfoBlock
+            style={{ marginTop: "2rem" }}
+            download
+            href="/download/Curriculum-Vitae-Łukasz-Kosobucki.pdf"
+          >
+            <img src="/download.png" alt="download" />
+            <Heading5>Download my CV</Heading5>
+          </FooterInfoBlock>
         </ImagesContainer>
 
         <div>
-          <p>some words</p>
+          <TextBlock>
+            some wordssome wordssome wordssome wordssome some wordssome
+            wordssome wordssome wordssome some wordssome wordssome wordssome
+            wordssome some wordssome wordssome wordssome wordssome
+          </TextBlock>
         </div>
       </ContentContainer>
-      <FooterInfoBlock>
-        <img src="/download.png" alt="download" />
-        <Heading5>Download my CV</Heading5>
-      </FooterInfoBlock>
     </SectionContainer>
   );
 };
