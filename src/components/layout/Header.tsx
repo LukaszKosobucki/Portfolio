@@ -19,7 +19,7 @@ const Header = () => {
           <Heading5>About</Heading5>
         </a>
         <a href="#work">
-          <Heading5>Work</Heading5>
+          <Heading5>Projects</Heading5>
         </a>
         <a href="#contact">
           <Heading5>Contact</Heading5>

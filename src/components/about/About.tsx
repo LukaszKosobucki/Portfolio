@@ -51,9 +51,18 @@ const About = () => {
 
         <div>
           <TextBlock>
-            some wordssome wordssome wordssome wordssome some wordssome
-            wordssome wordssome wordssome some wordssome wordssome wordssome
-            wordssome some wordssome wordssome wordssome wordssome
+            Hi, I am a passionate Frontend Developer with many skills and
+            experience. My main programming languages and technologies are
+            ReactJS with use of typescript. I also find myslef comfortable with
+            Angular-Typescript as well as other minor backend tasks in Python or
+            NodeJS. I find pleasure in developing new applications with pracical
+            use in my daily life, or trying to upgrade existing application with
+            my fresh take on them. In my free time I like to develop new
+            personal skills or polish existing ones. My main hobbies at the
+            moment are learning to play Piano and reading books. The rest of my
+            free time I like to spent dong some other smaller hobbies like
+            solving rubicks cube, folding origami, juggling, pen spinning and
+            many others. You can find more about my proffesional life in my CV.
           </TextBlock>
         </div>
       </ContentContainer>

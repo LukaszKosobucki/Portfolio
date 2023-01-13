@@ -19,7 +19,7 @@ const ListOfWorks = [
     figma:
       "https://www.figma.com/file/cT9fEtevElnWMWqEQT3eSd/14.10.2022-(deadline)---ecommerce-app?node-id=1%3A609&t=gAsKMyFt9JSl9mNb-1",
     github: "https://github.com/LukaszKosobucki/Autumn-Shop",
-    website: "#",
+    website: "https://www.jesieniara-ecommerce.lukaszkosobucki.pl",
   },
 ];
 
@@ -27,7 +27,7 @@ const ListWorks = () => {
   return (
     <SectionContainer id="work">
       <Heading1Container>
-        <Heading1>Works</Heading1>
+        <Heading1>Projects</Heading1>
       </Heading1Container>
       {ListOfWorks.map((work) => (
         <Work work={work} key={work.title}></Work>
