@@ -37,7 +37,7 @@ const About = () => {
           <PhotoBlock src="przystojniak.jpg" alt="me" />
 
           {listOfIcons.map((icon) => (
-            <IconBlock src={"icons" + icon} alt="" />
+            <IconBlock src={"icons" + icon} alt="" key={icon} />
           ))}
           <FooterInfoBlock
             style={{ marginTop: "2rem" }}

@@ -4,7 +4,7 @@ import { FooterContainer, FooterInfoBlock, IconBlock } from "./Footer.styled";
 const Footer = () => {
   return (
     <FooterContainer>
-      <FooterInfoBlock>
+      <FooterInfoBlock href="mailto:lukasz.kos98@gmail.com?Subject=subject">
         <IconBlock src="email.png" alt="email" />
         <Heading5>lukasz.kos98@gmail.com</Heading5>
       </FooterInfoBlock>

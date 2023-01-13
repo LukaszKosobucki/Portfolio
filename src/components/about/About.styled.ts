@@ -15,6 +15,7 @@ export const SectionContainer = styled.div`
   min-height: 100vh;
   scroll-margin-top: 4rem;
   align-items: center;
+  margin-bottom: 4rem;
 `;
 
 export const ContentContainer = styled.div`

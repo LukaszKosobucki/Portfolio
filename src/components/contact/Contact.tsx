@@ -20,7 +20,7 @@ const Contact = () => {
           media
         </Heading5>
         <InfoContainer>
-          <FooterInfoBlock>
+          <FooterInfoBlock href="mailto:lukasz.kos98@gmail.com?Subject=subject">
             <IconBlock src="email.png" alt="email" />
             <Heading5>lukasz.kos98@gmail.com</Heading5>
           </FooterInfoBlock>
