@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BigLogo = styled.div`
-  background-image: url("/logo_transparent.png");
+  background-image: url("logo_transparent.png");
   height: 600px;
   width: 600px;
   background-size: 100% 100%;

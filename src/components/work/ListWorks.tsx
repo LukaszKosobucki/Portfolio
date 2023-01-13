@@ -15,7 +15,7 @@ const ListOfWorks = [
       "Styling with Material UI self implemented theme",
       "State management using Context Provider as wrapper for the App",
     ],
-    photo: "/autumn-shop.png",
+    photo: "autumn-shop.png",
     figma:
       "https://www.figma.com/file/cT9fEtevElnWMWqEQT3eSd/14.10.2022-(deadline)---ecommerce-app?node-id=1%3A609&t=gAsKMyFt9JSl9mNb-1",
     github: "https://github.com/LukaszKosobucki/Autumn-Shop",

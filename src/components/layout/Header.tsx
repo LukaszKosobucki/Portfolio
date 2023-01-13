@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <Navbar>
       <LogoContainer href="#start">
-        <Logo src="/logo_transparent.png" alt="logo" />
+        <Logo src="logo_transparent.png" alt="logo" />
       </LogoContainer>
       <Title>Portfolio</Title>
       <NavContainer>

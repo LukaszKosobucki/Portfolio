@@ -30,12 +30,12 @@ const Work = ({ work }: { work: any }) => {
         <IconsContainer>
           {work.github && (
             <a href={work.github} target="_blank" rel="noreferrer">
-              <IconBlockWork src="/github.png" alt="github project link" />
+              <IconBlockWork src="github.png" alt="github project link" />
             </a>
           )}
           {work.figma && (
             <a href={work.figma} target="_blank" rel="noreferrer">
-              <IconBlockWork src="/figma.png" alt="figma project link" />
+              <IconBlockWork src="figma.png" alt="figma project link" />
             </a>
           )}
         </IconsContainer>

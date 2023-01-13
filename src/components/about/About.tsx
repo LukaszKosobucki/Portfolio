@@ -34,17 +34,17 @@ const About = () => {
       </Heading1Container>
       <ContentContainer>
         <ImagesContainer>
-          <PhotoBlock src="/przystojniak.jpg" alt="me" />
+          <PhotoBlock src="przystojniak.jpg" alt="me" />
 
           {listOfIcons.map((icon) => (
-            <IconBlock src={"/icons" + icon} alt="" />
+            <IconBlock src={"icons" + icon} alt="" />
           ))}
           <FooterInfoBlock
             style={{ marginTop: "2rem" }}
             download
-            href="/download/Curriculum-Vitae-Łukasz-Kosobucki.pdf"
+            href="download/Curriculum-Vitae-Łukasz-Kosobucki.pdf"
           >
-            <img src="/download.png" alt="download" />
+            <img src="download.png" alt="download" />
             <Heading5>Download my CV</Heading5>
           </FooterInfoBlock>
         </ImagesContainer>
