@@ -1,21 +1,23 @@
 import styled from "styled-components";
 import { colors, Heading4 } from "../../global.styled";
+import { motion } from "framer-motion";
 
 export const Navbar = styled.nav`
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   flex-basis: 100%;
-  margin-left: 10%;
-  margin-right: 10%;
+  padding-right: 10%;
+  padding-left: 10%;
   justify-content: space-between;
   border-bottom: 1px solid ${colors.shyBlack};
   min-height: 60px;
   align-items: center;
-  background-color: ${colors.shyGray};
+  background-color: ${colors.colorBlack100};
   position: fixed;
   top: 0;
   width: 80%;
+  z-index: 1;
 `;
 
 export const NavContainer = styled.div`
@@ -36,7 +38,7 @@ export const Title = styled(Heading4)`
   flex: 1;
 `;
 
-export const LogoContainer = styled.a`
+export const LogoContainer = styled(motion.a)`
   display: flex;
   flex: 1;
 `;

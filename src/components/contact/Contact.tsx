@@ -10,17 +10,30 @@ import {
 const Contact = () => {
   return (
     <ContactSectionContainer id="contact">
-      <Heading1Container>
+      <Heading1Container
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+      >
         <Heading1>Contact</Heading1>
       </Heading1Container>
 
-      <ContactInfo>
+      <ContactInfo
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+      >
         <Heading5>
           You can catch me by writing to me personally or through listed social
           media
         </Heading5>
         <InfoContainer>
-          <FooterInfoBlock href="mailto:lukasz.kos98@gmail.com?Subject=subject">
+          <FooterInfoBlock
+            href="mailto:lukasz.kos98@gmail.com?Subject=subject"
+            transition={{ duration: 0.4, ease: "easeInOut", delay: 0.1 }}
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+          >
             <IconBlock src="email.png" alt="email" />
             <Heading5>lukasz.kos98@gmail.com</Heading5>
           </FooterInfoBlock>
@@ -28,6 +41,9 @@ const Contact = () => {
             href="https://github.com/lukaszkosobucki"
             target="_blank"
             rel="noreferrer"
+            transition={{ duration: 0.4, ease: "easeInOut", delay: 0.2 }}
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
           >
             <IconBlock src="github.png" alt="github" />
             <Heading5>/lukaszkosobucki</Heading5>
@@ -36,6 +52,9 @@ const Contact = () => {
             href="https://pl.linkedin.com/in/lukasz-kosobucki"
             target="_blank"
             rel="noreferrer"
+            transition={{ duration: 0.4, ease: "easeInOut", delay: 0.3 }}
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
           >
             <IconBlock src="linkedin.png" alt="linkedin" />
             <Heading5>/lukasz-kosobucki</Heading5>

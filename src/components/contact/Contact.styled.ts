@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { SectionContainer } from "../about/About.styled";
+import { motion } from "framer-motion";
 
 export const ContactSectionContainer = styled(SectionContainer)`
   min-height: 50vh;
   align-items: center;
 `;
 
-export const InfoContainer = styled.div`
+export const InfoContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;

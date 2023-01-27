@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../global.styled";
+import { motion } from "framer-motion";
 
 export const FooterContainer = styled.div`
   display: flex;
@@ -13,14 +14,14 @@ export const FooterContainer = styled.div`
   border-top: 1px solid ${colors.shyBlack};
 `;
 
-export const FooterInfoBlock = styled.a`
+export const FooterInfoBlock = styled(motion.a)`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.6rem;
 `;
 
-export const IconBlock = styled.img`
+export const IconBlock = styled(motion.img)`
   height: 36px;
   width: 36px;
 `;
