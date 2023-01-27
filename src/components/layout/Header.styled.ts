@@ -18,6 +18,10 @@ export const Navbar = styled.nav`
   top: 0;
   width: 80%;
   z-index: 1;
+  @media (max-width: 600px) {
+    width: 100vw;
+    padding: 0;
+  }
 `;
 
 export const NavContainer = styled.div`
@@ -25,6 +29,9 @@ export const NavContainer = styled.div`
   flex: 1;
   justify-content: flex-end;
   gap: 2rem;
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 export const Logo = styled.img`
@@ -35,10 +42,13 @@ export const Logo = styled.img`
 export const Title = styled(Heading4)`
   display: flex;
   justify-content: center;
-  flex: 1;
 `;
 
 export const LogoContainer = styled(motion.a)`
   display: flex;
   flex: 1;
+  @media (max-width: 600px) {
+    flex: 0;
+    justify-content: start;
+  }
 `;

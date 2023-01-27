@@ -46,7 +46,7 @@ const ListOfWorks = [
   },
 ];
 
-const ListWorks = () => {
+const ListWorks = ({ isMobile }: { isMobile: boolean }) => {
   return (
     <SectionContainer id="work">
       <Heading1Container

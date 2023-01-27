@@ -87,6 +87,12 @@ export const GlobalStyle = createGlobalStyle`
         overflow-x: clip;
         background-color: ${colors.shyGray};
         font-size: 16px;
+        width: 100vw;
+        height: 100vh;
+          @media (max-width: 600px) {
+          width: 100vw;
+          height: 100%;
+        }
     }
     
     html {

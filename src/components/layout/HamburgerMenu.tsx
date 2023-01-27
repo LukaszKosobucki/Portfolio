@@ -1,33 +1,16 @@
+import { useState } from "react";
 import { Heading5 } from "../../global.styled";
-import { GlobalStateContext } from "../../utils/ContextWrapper";
 import { FooterInfoBlock } from "./Footer.styled";
-import {
-  Logo,
-  LogoContainer,
-  Navbar,
-  NavContainer,
-  Title,
-} from "./Header.styled";
-import { useContext } from "react";
-import HamburgerMenu from "./HamburgerMenu";
+import { NavContainer } from "./Header.styled";
 
-const Header = () => {
-  const globalServices = useContext(GlobalStateContext);
+const HamburgerMenu = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Navbar>
-      <LogoContainer
-        href="#start"
-        transition={{ duration: 0.4, ease: "easeInOut", delay: 0.1 }}
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
-      >
-        <Logo src="logo_transparent.png" alt="logo" />
-      </LogoContainer>
-      <Title>Portfolio</Title>
-      {globalServices.matches ? (
-        <HamburgerMenu />
-      ) : (
+    <>
+      <button onClick={() => setIsOpen(!isOpen)}>click</button>
+
+      {isOpen && (
         <NavContainer>
           <FooterInfoBlock
             href="#about"
@@ -55,8 +38,8 @@ const Header = () => {
           </FooterInfoBlock>
         </NavContainer>
       )}
-    </Navbar>
+    </>
   );
 };
 
-export default Header;
+export default HamburgerMenu;

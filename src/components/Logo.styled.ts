@@ -11,4 +11,9 @@ export const BigLogo = styled(motion.div)`
   justify-content: center;
   align-items: center;
   margin: 10vh 0 20vh 0;
+
+  @media (max-width: 600px) {
+    height: 290px;
+    width: 290px;
+  }
 `;

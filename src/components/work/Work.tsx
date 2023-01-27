@@ -12,7 +12,11 @@ import {
 
 const Work = ({ work }: { work: any }) => {
   return (
-    <WorkContainer initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+    <WorkContainer
+      transition={{ duration: 0.4, delay: 0.1 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+    >
       <PhotoContainer
         key={work.id}
         transition={{ duration: 1, ease: "easeInOut" }}

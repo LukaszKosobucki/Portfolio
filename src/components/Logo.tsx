@@ -1,15 +1,28 @@
-import { Heading1 } from "../global.styled";
+import { colors, Heading1, Heading4 } from "../global.styled";
 import { BigLogo } from "./Logo.styled";
 
-const Logo = () => {
+const Logo = ({ isMobile }: { isMobile: boolean }) => {
   return (
     <BigLogo
       transition={{ duration: 0.4 }}
       initial={{ opacity: 0.2 }}
       whileInView={{ opacity: 1 }}
     >
-      <Heading1 style={{ marginTop: "10rem" }}>FRONTend</Heading1>
-      <Heading1>DEVeloper</Heading1>
+      {isMobile ? (
+        <>
+          <Heading1 style={{ marginTop: "10rem", color: `${colors.shyBlue}` }}>
+            FRONTend <br />
+            DEVeloper
+          </Heading1>
+        </>
+      ) : (
+        <>
+          <Heading4 style={{ marginTop: "4rem", color: `${colors.shyBlue}` }}>
+            FRONTend <br />
+            DEVeloper
+          </Heading4>
+        </>
+      )}
     </BigLogo>
   );
 };

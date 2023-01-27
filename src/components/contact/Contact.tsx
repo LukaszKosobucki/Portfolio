@@ -1,5 +1,5 @@
 import { Heading1, Heading5 } from "../../global.styled";
-import { Heading1Container } from "../about/About.styled";
+import { ContactInfoContainer, Heading1Container } from "../about/About.styled";
 import { FooterInfoBlock, IconBlock } from "../layout/Footer.styled";
 import {
   ContactInfo,
@@ -7,7 +7,7 @@ import {
   InfoContainer,
 } from "./Contact.styled";
 
-const Contact = () => {
+const Contact = ({ isMobile }: { isMobile: boolean }) => {
   return (
     <ContactSectionContainer id="contact">
       <Heading1Container
@@ -23,10 +23,10 @@ const Contact = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
       >
-        <Heading5>
+        <ContactInfoContainer>
           You can catch me by writing to me personally or through listed social
           media
-        </Heading5>
+        </ContactInfoContainer>
         <InfoContainer>
           <FooterInfoBlock
             href="mailto:lukasz.kos98@gmail.com?Subject=subject"
