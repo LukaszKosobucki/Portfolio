@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const BigLogo = styled.div`
+export const BigLogo = styled(motion.div)`
   background-image: url("logo_transparent.png");
   height: 600px;
   width: 600px;

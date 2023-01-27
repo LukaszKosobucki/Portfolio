@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { colors, ParagraphLarge } from "../../global.styled";
+import { motion } from "framer-motion";
 
-export const Heading1Container = styled.div`
+export const Heading1Container = styled(motion.div)`
   border-bottom: 1px solid ${colors.shyBlack};
   display: flex;
   min-width: 100%;
@@ -26,7 +27,7 @@ export const ContentContainer = styled.div`
   gap: 2rem;
 `;
 
-export const ImagesContainer = styled.div`
+export const ImagesContainer = styled(motion.div)`
   display: flex;
   flex-direction: row;
   width: 200px;
@@ -43,6 +44,8 @@ export const IconBlock = styled.img`
 export const TextBlock = styled(ParagraphLarge)`
   max-width: 700px;
 `;
+
+export const TextContainer = styled(motion.div)``;
 
 export const PhotoBlock = styled.img`
   width: 200px;

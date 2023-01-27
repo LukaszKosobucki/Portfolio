@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { colors } from "../../global.styled";
 import { IconBlock } from "../layout/Footer.styled";
+import { motion } from "framer-motion";
 
-export const WorkContainer = styled.div`
+export const WorkContainer = styled(motion.div)`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -15,7 +16,7 @@ export const WorkContainer = styled.div`
   padding: 2rem;
 `;
 
-export const PhotoContainer = styled.div`
+export const PhotoContainer = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: start;
@@ -30,7 +31,7 @@ export const Photo = styled.img`
   max-width: 400px;
 `;
 
-export const ProjectInfoBox = styled.div`
+export const ProjectInfoBox = styled(motion.div)`
   display: flex;
   flex-direction: column;
   border-left: 1px solid ${colors.shyBlack};

@@ -49,7 +49,11 @@ const ListOfWorks = [
 const ListWorks = () => {
   return (
     <SectionContainer id="work">
-      <Heading1Container>
+      <Heading1Container
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+      >
         <Heading1>Projects</Heading1>
       </Heading1Container>
       {ListOfWorks.map((work) => (

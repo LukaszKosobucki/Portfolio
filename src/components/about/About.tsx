@@ -8,6 +8,7 @@ import {
   PhotoBlock,
   SectionContainer,
   TextBlock,
+  TextContainer,
 } from "./About.styled";
 
 const listOfIcons = [
@@ -29,11 +30,19 @@ const listOfIcons = [
 const About = () => {
   return (
     <SectionContainer id="about">
-      <Heading1Container>
+      <Heading1Container
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        initial={{ scale: 0.2 }}
+        whileInView={{ scale: 1 }}
+      >
         <Heading1>About</Heading1>
       </Heading1Container>
       <ContentContainer>
-        <ImagesContainer>
+        <ImagesContainer
+          transition={{ duration: 0.4, ease: "easeInOut" }}
+          initial={{ x: "-20rem", scale: 0.2 }}
+          whileInView={{ x: 0, scale: 1 }}
+        >
           <PhotoBlock src="przystojniak.jpg" alt="me" />
 
           {listOfIcons.map((icon) => (
@@ -49,7 +58,11 @@ const About = () => {
           </FooterInfoBlock>
         </ImagesContainer>
 
-        <div>
+        <TextContainer
+          transition={{ duration: 0.4, ease: "easeInOut" }}
+          initial={{ x: "20rem", scale: 0.2 }}
+          whileInView={{ x: 0, scale: 1 }}
+        >
           <TextBlock>
             Hi, I am a passionate Frontend Developer with many skills and
             experience. My main programming languages and technologies are
@@ -64,7 +77,7 @@ const About = () => {
             solving rubicks cube, folding origami, juggling, pen spinning and
             many others. You can find more about my proffesional life in my CV.
           </TextBlock>
-        </div>
+        </TextContainer>
       </ContentContainer>
     </SectionContainer>
   );
