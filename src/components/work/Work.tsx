@@ -3,6 +3,7 @@ import {
   IconBlockWork,
   IconsContainer,
   Photo,
+  PhotoAnchor,
   PhotoContainer,
   ProjectInfoBox,
   TaskList,
@@ -13,9 +14,9 @@ const Work = ({ work }: { work: any }) => {
   return (
     <WorkContainer>
       <PhotoContainer>
-        <a href={work.website} target="_blank" rel="noreferrer">
+        <PhotoAnchor href={work.website} target="_blank" rel="noreferrer">
           <Photo src={work.photo} alt="project" />
-        </a>
+        </PhotoAnchor>
       </PhotoContainer>
       <ProjectInfoBox>
         <Heading3>{work.title}</Heading3>
@@ -36,6 +37,19 @@ const Work = ({ work }: { work: any }) => {
           {work.figma && (
             <a href={work.figma} target="_blank" rel="noreferrer">
               <IconBlockWork src="figma.png" alt="figma project link" />
+            </a>
+          )}
+          {work.drawio && (
+            <a href={work.drawio} target="_blank" rel="noreferrer">
+              <IconBlockWork src="icons/drawio.svg" alt="drawio link" />
+            </a>
+          )}
+          {work.sonarcloud && (
+            <a href={work.sonarcloud} target="_blank" rel="noreferrer">
+              <IconBlockWork
+                src="icons/sonarcloud.svg"
+                alt="sonarcloud scan link"
+              />
             </a>
           )}
         </IconsContainer>

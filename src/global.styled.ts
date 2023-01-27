@@ -40,6 +40,7 @@ export const colors = {
   shyGray: "#e8e8e8",
   shyBlue: "#364f6b",
   shyBlack: "#393939",
+  colorBlack100: "#dddddd",
 };
 
 export const Heading1 = styled.h1`
