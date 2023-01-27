@@ -4,25 +4,29 @@ import { FooterContainer, FooterInfoBlock, IconBlock } from "./Footer.styled";
 const Footer = () => {
   return (
     <FooterContainer>
-      <FooterInfoBlock href="mailto:lukasz.kos98@gmail.com?Subject=subject">
-        <IconBlock src="email.png" alt="email" />
-        <Heading5>lukasz.kos98@gmail.com</Heading5>
-      </FooterInfoBlock>
       <FooterInfoBlock
-        href="https://github.com/lukaszkosobucki"
+        href="https://www.figma.com/file/Ue8NpN0LFtp5Z3XAIMWj43/Portfolio?node-id=30%3A28&t=RYYNGZofgrdqKWei-1"
         target="_blank"
         rel="noreferrer"
       >
-        <IconBlock src="github.png" alt="github" />
-        <Heading5>/lukaszkosobucki</Heading5>
+        <IconBlock src="figma.png" alt="figma-portfolio" />
+        <Heading5>Portfolio design</Heading5>
       </FooterInfoBlock>
       <FooterInfoBlock
-        href="https://pl.linkedin.com/in/lukasz-kosobucki"
+        href="https://github.com/LukaszKosobucki/Portfolio"
         target="_blank"
         rel="noreferrer"
       >
-        <IconBlock src="linkedin.png" alt="linkedin" />
-        <Heading5>/lukasz-kosobucki</Heading5>
+        <IconBlock src="github.png" alt="github-portfolio" />
+        <Heading5>Portfolio repository</Heading5>
+      </FooterInfoBlock>
+      <FooterInfoBlock
+        href="https://sonarcloud.io/project/overview?id=LukaszKosobucki_Portfolio"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <IconBlock src="icons/sonarcloud.svg" alt="sonarcloud-portfolio" />
+        <Heading5>Portfolio SonarCloud</Heading5>
       </FooterInfoBlock>
     </FooterContainer>
   );

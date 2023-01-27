@@ -9,18 +9,20 @@ export const WorkContainer = styled.div`
   gap: 1rem;
   align-items: center;
   margin-top: 2rem;
+  box-shadow: 4px 4px 4px ${colors.shyBlack};
+  background-color: ${colors.colorBlack100};
+  border-radius: 25px;
+  padding: 2rem;
 `;
 
 export const PhotoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: start;
-  max-height: 500px;
   max-width: 400px;
   min-height: 500px;
   min-width: 400px;
   padding-right: 1rem;
-  border-right: 1px solid ${colors.shyBlack};
 `;
 
 export const Photo = styled.img`
@@ -31,7 +33,9 @@ export const Photo = styled.img`
 export const ProjectInfoBox = styled.div`
   display: flex;
   flex-direction: column;
-  max-height: 500px;
+  border-left: 1px solid ${colors.shyBlack};
+  padding-left: 2rem;
+  padding-right: 1rem;
   max-width: 400px;
   min-height: 500px;
   min-width: 400px;
@@ -55,4 +59,11 @@ export const IconBlockWork = styled(IconBlock)`
 export const IconsContainer = styled.div`
   display: flex;
   flex-direction: row;
+`;
+
+export const PhotoAnchor = styled.a`
+  transition-duration: 0.5s;
+  &:hover {
+    scale: 1.1;
+  }
 `;
