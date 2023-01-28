@@ -14,6 +14,11 @@ export const WorkContainer = styled(motion.div)`
   background-color: ${colors.colorBlack100};
   border-radius: 25px;
   padding: 2rem;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    padding: 0;
+  }
 `;
 
 export const PhotoContainer = styled(motion.div)`
@@ -24,6 +29,10 @@ export const PhotoContainer = styled(motion.div)`
   min-height: 500px;
   min-width: 400px;
   padding-right: 1rem;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    height: auto;
+  }
 `;
 
 export const Photo = styled.img`
@@ -66,5 +75,10 @@ export const PhotoAnchor = styled.a`
   transition-duration: 0.5s;
   &:hover {
     scale: 1.1;
+  }
+  @media (max-width: 600px) {
+    &:hover {
+      scale: 1.1;
+    }
   }
 `;
