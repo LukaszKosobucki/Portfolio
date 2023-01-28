@@ -54,6 +54,7 @@ export const IconBlock = styled.img`
 
 export const TextBlock = styled(ParagraphLarge)`
   max-width: 700px;
+  transition: all 0.3s ease-in-out;
 `;
 
 export const TextContainer = styled(motion.div)`

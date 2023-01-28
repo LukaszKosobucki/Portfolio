@@ -7,7 +7,7 @@ import {
   InfoContainer,
 } from "./Contact.styled";
 
-const Contact = ({ isMobile }: { isMobile: boolean }) => {
+const Contact = () => {
   return (
     <ContactSectionContainer id="contact">
       <Heading1Container
