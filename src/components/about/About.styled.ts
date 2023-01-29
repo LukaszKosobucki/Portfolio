@@ -8,6 +8,7 @@ export const Heading1Container = styled(motion.div)`
   min-width: 100%;
   justify-content: center;
   margin-bottom: 3rem;
+
   @media (max-width: 600px) {
     min-width: 80%;
   }
@@ -20,6 +21,7 @@ export const SectionContainer = styled.div`
   scroll-margin-top: 4rem;
   align-items: center;
   margin-bottom: 4rem;
+  gap: 1rem;
 `;
 
 export const ContentContainer = styled.div`
@@ -54,7 +56,6 @@ export const IconBlock = styled.img`
 
 export const TextBlock = styled(ParagraphLarge)`
   max-width: 700px;
-  transition: all 0.3s ease-in-out;
 `;
 
 export const TextContainer = styled(motion.div)`
@@ -62,6 +63,9 @@ export const TextContainer = styled(motion.div)`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media (max-width: 600px) {
+    width: 300px;
+  }
 `;
 
 export const PhotoBlock = styled.img`

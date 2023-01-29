@@ -18,6 +18,8 @@ export const WorkContainer = styled(motion.div)`
   @media (max-width: 600px) {
     flex-direction: column;
     padding: 0;
+    width: 300px;
+    margin: 0;
   }
 `;
 
@@ -32,12 +34,19 @@ export const PhotoContainer = styled(motion.div)`
   @media (max-width: 600px) {
     flex-direction: column;
     height: auto;
+    min-height: auto;
+    padding: 0;
+    margin: 0;
   }
 `;
 
 export const Photo = styled.img`
   max-height: 500px;
   max-width: 400px;
+  @media (max-width: 600px) {
+    border-radius: 25px 25px 0px 0px;
+    width: 300px;
+  }
 `;
 
 export const ProjectInfoBox = styled(motion.div)`
@@ -52,6 +61,15 @@ export const ProjectInfoBox = styled(motion.div)`
   gap: 1.5rem;
   justify-content: space-between;
   align-items: start;
+  @media (max-width: 600px) {
+    max-width: 290px;
+    min-width: 290px;
+    min-height: auto;
+    width: 290px;
+    margin: 0;
+    border: none;
+    padding: 0 5px 0 5px;
+  }
 `;
 
 export const TaskList = styled.ul`
@@ -59,6 +77,12 @@ export const TaskList = styled.ul`
   flex-direction: column;
   margin-left: 3rem;
   flex: 1;
+  -webkit-padding-start: 0;
+  @media (max-width: 600px) {
+    width: 270px;
+    padding-left: 0px;
+    margin-left: 1rem;
+  }
 `;
 
 export const IconBlockWork = styled(IconBlock)`
@@ -73,12 +97,13 @@ export const IconsContainer = styled.div`
 
 export const PhotoAnchor = styled.a`
   transition-duration: 0.5s;
-  &:hover {
-    scale: 1.1;
-  }
-  @media (max-width: 600px) {
+
+  @media (min-width: 600px) {
     &:hover {
       scale: 1.1;
     }
+  }
+  @media (max-width: 600px) {
+    border-radius: 25px 25px 0px 0px;
   }
 `;

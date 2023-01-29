@@ -1,5 +1,10 @@
 import { useContext, useState } from "react";
-import { Heading1, Heading3, Heading5 } from "../../global.styled";
+import {
+  Heading1,
+  Heading3,
+  Heading5,
+  ParagraphBase,
+} from "../../global.styled";
 import { GlobalStateContext } from "../../utils/ContextWrapper";
 import { FooterInfoBlock } from "../layout/Footer.styled";
 import {
@@ -85,7 +90,7 @@ const About = () => {
                     transformOrigin: "top",
                   }}
                 >
-                  <TextBlock>
+                  <ParagraphBase>
                     Hi, I am a passionate Frontend Developer with many skills
                     and experience. My main programming languages and
                     technologies are ReactJS with use of typescript. I also find
@@ -100,7 +105,7 @@ const About = () => {
                     hobbies like solving rubicks cube, folding origami,
                     juggling, pen spinning and many others. You can find more
                     about my proffesional life in my CV.
-                  </TextBlock>
+                  </ParagraphBase>
                 </motion.div>
               )}
             </AnimatePresence>

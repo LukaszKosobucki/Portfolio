@@ -1,4 +1,6 @@
+import { useState, useContext } from "react";
 import { Heading3, ParagraphBase } from "../../global.styled";
+import { GlobalStateContext } from "../../utils/ContextWrapper";
 import {
   IconBlockWork,
   IconsContainer,
@@ -11,6 +13,8 @@ import {
 } from "./Work.styled";
 
 const Work = ({ work }: { work: any }) => {
+  const [isReading, setIsReading] = useState<boolean>(false);
+  const globalServices = useContext(GlobalStateContext);
   return (
     <WorkContainer
       transition={{ duration: 0.4, delay: 0.1 }}
@@ -35,13 +39,32 @@ const Work = ({ work }: { work: any }) => {
       >
         <Heading3>{work.title}</Heading3>
         <ParagraphBase>{work.description}</ParagraphBase>
-        <TaskList>
-          {work.tasks.map((task: any) => (
-            <li key={task}>
-              <ParagraphBase>{task}</ParagraphBase>
-            </li>
-          ))}
-        </TaskList>
+
+        {globalServices.matches ? (
+          <>
+            <button onClick={() => setIsReading(!isReading)}>
+              {isReading ? "Read less" : "Read more"}
+            </button>
+            {isReading && (
+              <TaskList>
+                {work.tasks.map((task: any) => (
+                  <li key={task}>
+                    <ParagraphBase>{task}</ParagraphBase>
+                  </li>
+                ))}
+              </TaskList>
+            )}
+          </>
+        ) : (
+          <TaskList>
+            {work.tasks.map((task: any) => (
+              <li key={task}>
+                <ParagraphBase>{task}</ParagraphBase>
+              </li>
+            ))}
+          </TaskList>
+        )}
+
         <IconsContainer>
           {work.github && (
             <a href={work.github} target="_blank" rel="noreferrer">
