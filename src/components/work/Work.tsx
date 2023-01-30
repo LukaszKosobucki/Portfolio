@@ -1,4 +1,10 @@
-import { Heading3, ParagraphBase } from "../../global.styled";
+import { useState, useContext } from "react";
+import {
+  ButtonTransparent,
+  Heading3,
+  ParagraphBase,
+} from "../../global.styled";
+import { GlobalStateContext } from "../../utils/ContextWrapper";
 import {
   IconBlockWork,
   IconsContainer,
@@ -9,10 +15,17 @@ import {
   TaskList,
   WorkContainer,
 } from "./Work.styled";
+import { AnimatePresence } from "framer-motion";
 
 const Work = ({ work }: { work: any }) => {
+  const [isReading, setIsReading] = useState<boolean>(false);
+  const globalServices = useContext(GlobalStateContext);
   return (
-    <WorkContainer initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+    <WorkContainer
+      transition={{ duration: 0.4, delay: 0.1 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+    >
       <PhotoContainer
         key={work.id}
         transition={{ duration: 1, ease: "easeInOut" }}
@@ -31,13 +44,45 @@ const Work = ({ work }: { work: any }) => {
       >
         <Heading3>{work.title}</Heading3>
         <ParagraphBase>{work.description}</ParagraphBase>
-        <TaskList>
-          {work.tasks.map((task: any) => (
-            <li key={task}>
-              <ParagraphBase>{task}</ParagraphBase>
-            </li>
-          ))}
-        </TaskList>
+
+        {globalServices.matches ? (
+          <AnimatePresence>
+            <ButtonTransparent onClick={() => setIsReading(!isReading)}>
+              {isReading ? (
+                <ParagraphBase> Read less</ParagraphBase>
+              ) : (
+                <ParagraphBase> Read more...</ParagraphBase>
+              )}
+            </ButtonTransparent>
+            {isReading && (
+              <TaskList
+                key={work.title}
+                transition={{
+                  duration: 0.4,
+                  ease: "easeInOut",
+                }}
+                initial={{ scaleY: 0 }}
+                animate={{ scaleY: 1 }}
+                exit={{ scaleY: 0 }}
+              >
+                {work.tasks.map((task: any) => (
+                  <li key={task}>
+                    <ParagraphBase>{task}</ParagraphBase>
+                  </li>
+                ))}
+              </TaskList>
+            )}
+          </AnimatePresence>
+        ) : (
+          <TaskList>
+            {work.tasks.map((task: any) => (
+              <li key={task}>
+                <ParagraphBase>{task}</ParagraphBase>
+              </li>
+            ))}
+          </TaskList>
+        )}
+
         <IconsContainer>
           {work.github && (
             <a href={work.github} target="_blank" rel="noreferrer">

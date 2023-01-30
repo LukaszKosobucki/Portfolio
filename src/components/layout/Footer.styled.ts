@@ -12,6 +12,14 @@ export const FooterContainer = styled.div`
   margin-left: 10%;
   margin-right: 10%;
   border-top: 1px solid ${colors.shyBlack};
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
+    margin: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 `;
 
 export const FooterInfoBlock = styled(motion.a)`

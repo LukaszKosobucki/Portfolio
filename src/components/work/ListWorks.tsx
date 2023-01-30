@@ -1,6 +1,8 @@
-import { Heading1 } from "../../global.styled";
+import { Heading1, Heading3 } from "../../global.styled";
+import { GlobalStateContext } from "../../utils/ContextWrapper";
 import { Heading1Container, SectionContainer } from "../about/About.styled";
 import Work from "./Work";
+import { useContext } from "react";
 
 const ListOfWorks = [
   {
@@ -47,6 +49,7 @@ const ListOfWorks = [
 ];
 
 const ListWorks = () => {
+  const globalServices = useContext(GlobalStateContext);
   return (
     <SectionContainer id="work">
       <Heading1Container
@@ -54,7 +57,11 @@ const ListWorks = () => {
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
       >
-        <Heading1>Projects</Heading1>
+        {globalServices.matches ? (
+          <Heading3>Projects</Heading3>
+        ) : (
+          <Heading1>Projects</Heading1>
+        )}
       </Heading1Container>
       {ListOfWorks.map((work) => (
         <Work work={work} key={work.title}></Work>

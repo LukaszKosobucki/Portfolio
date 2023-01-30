@@ -74,6 +74,15 @@ export const ParagraphLarge = styled.div`
   font-weight: ${typography.paragraphLarge.fontWeight};
   line-height: ${typography.paragraphLarge.lineHeight};
 `;
+export const ButtonTransparent = styled.button`
+  border: none;
+  background-color: transparent;
+  &:active,
+  &:hover {
+    border: none;
+    background-color: transparent;
+  }
+`;
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -87,6 +96,12 @@ export const GlobalStyle = createGlobalStyle`
         overflow-x: clip;
         background-color: ${colors.shyGray};
         font-size: 16px;
+        width: 100vw;
+        height: 100vh;
+          @media (max-width: 600px) {
+          width: 100vw;
+          height: 100%;
+        }
     }
     
     html {

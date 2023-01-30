@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, ParagraphLarge } from "../../global.styled";
+import { colors, Heading5, ParagraphLarge } from "../../global.styled";
 import { motion } from "framer-motion";
 
 export const Heading1Container = styled(motion.div)`
@@ -8,6 +8,10 @@ export const Heading1Container = styled(motion.div)`
   min-width: 100%;
   justify-content: center;
   margin-bottom: 3rem;
+
+  @media (max-width: 600px) {
+    min-width: 80%;
+  }
 `;
 export const SectionContainer = styled.div`
   display: flex;
@@ -17,6 +21,10 @@ export const SectionContainer = styled.div`
   scroll-margin-top: 4rem;
   align-items: center;
   margin-bottom: 4rem;
+  gap: 1rem;
+  @media (max-width: 600px) {
+    scroll-margin-top: 6.5rem;
+  }
 `;
 
 export const ContentContainer = styled.div`
@@ -25,6 +33,11 @@ export const ContentContainer = styled.div`
   justify-content: start;
   width: 90%;
   gap: 2rem;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const ImagesContainer = styled(motion.div)`
@@ -34,6 +47,9 @@ export const ImagesContainer = styled(motion.div)`
   flex-wrap: wrap;
   gap: 5px;
   justify-content: center;
+  @media (max-width: 600px) {
+    width: 250px;
+  }
 `;
 
 export const IconBlock = styled.img`
@@ -45,11 +61,26 @@ export const TextBlock = styled(ParagraphLarge)`
   max-width: 700px;
 `;
 
-export const TextContainer = styled(motion.div)``;
+export const TextContainer = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @media (max-width: 600px) {
+    width: 300px;
+  }
+`;
 
 export const PhotoBlock = styled.img`
   width: 200px;
   height: 200px;
   border-radius: 50%;
   margin-bottom: 1rem;
+`;
+
+export const ContactInfoContainer = styled(Heading5)`
+  @media (max-width: 600px) {
+    width: 250px;
+    text-align: center;
+  }
 `;

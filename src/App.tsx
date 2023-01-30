@@ -3,15 +3,18 @@ import Contact from "./components/contact/Contact";
 import MainLayout from "./components/layout/MainLayout";
 import Logo from "./components/Logo";
 import ListWorks from "./components/work/ListWorks";
+import { GlobalStateProvider } from "./utils/ContextWrapper";
 
 function App() {
   return (
-    <MainLayout>
-      <Logo />
-      <About />
-      <ListWorks />
-      <Contact />
-    </MainLayout>
+    <GlobalStateProvider>
+      <MainLayout>
+        <Logo />
+        <About />
+        <ListWorks />
+        <Contact />
+      </MainLayout>
+    </GlobalStateProvider>
   );
 }
 
