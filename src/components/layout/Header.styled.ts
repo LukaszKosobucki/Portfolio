@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors, Heading4 } from "../../global.styled";
 import { motion } from "framer-motion";
 
-export const Navbar = styled.nav`
+export const Navbar = styled.nav<{ isOpen?: boolean }>`
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -15,12 +15,16 @@ export const Navbar = styled.nav`
   align-items: center;
   background-color: ${colors.colorBlack100};
   position: fixed;
-  top: 0;
+  top: 0px;
   width: 80%;
   z-index: 1;
+  transition: 0.4s;
   @media (max-width: 600px) {
     width: 100vw;
     padding: 0;
+
+    flex-direction: column;
+    height: ${(props) => (props.isOpen ? "100px" : "60px")};
   }
 `;
 
@@ -30,7 +34,8 @@ export const NavContainer = styled.div`
   justify-content: flex-end;
   gap: 2rem;
   @media (max-width: 600px) {
-    flex-direction: column;
+    flex-direction: row;
+    gap: 1rem;
   }
 `;
 

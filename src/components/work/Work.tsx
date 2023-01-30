@@ -1,5 +1,9 @@
 import { useState, useContext } from "react";
-import { Heading3, ParagraphBase } from "../../global.styled";
+import {
+  ButtonTransparent,
+  Heading3,
+  ParagraphBase,
+} from "../../global.styled";
 import { GlobalStateContext } from "../../utils/ContextWrapper";
 import {
   IconBlockWork,
@@ -11,6 +15,7 @@ import {
   TaskList,
   WorkContainer,
 } from "./Work.styled";
+import { AnimatePresence } from "framer-motion";
 
 const Work = ({ work }: { work: any }) => {
   const [isReading, setIsReading] = useState<boolean>(false);
@@ -41,12 +46,25 @@ const Work = ({ work }: { work: any }) => {
         <ParagraphBase>{work.description}</ParagraphBase>
 
         {globalServices.matches ? (
-          <>
-            <button onClick={() => setIsReading(!isReading)}>
-              {isReading ? "Read less" : "Read more"}
-            </button>
+          <AnimatePresence>
+            <ButtonTransparent onClick={() => setIsReading(!isReading)}>
+              {isReading ? (
+                <ParagraphBase> Read less</ParagraphBase>
+              ) : (
+                <ParagraphBase> Read more...</ParagraphBase>
+              )}
+            </ButtonTransparent>
             {isReading && (
-              <TaskList>
+              <TaskList
+                key={work.title}
+                transition={{
+                  duration: 0.4,
+                  ease: "easeInOut",
+                }}
+                initial={{ scaleY: 0 }}
+                animate={{ scaleY: 1 }}
+                exit={{ scaleY: 0 }}
+              >
                 {work.tasks.map((task: any) => (
                   <li key={task}>
                     <ParagraphBase>{task}</ParagraphBase>
@@ -54,7 +72,7 @@ const Work = ({ work }: { work: any }) => {
                 ))}
               </TaskList>
             )}
-          </>
+          </AnimatePresence>
         ) : (
           <TaskList>
             {work.tasks.map((task: any) => (

@@ -72,7 +72,7 @@ export const ProjectInfoBox = styled(motion.div)`
   }
 `;
 
-export const TaskList = styled.ul`
+export const TaskList = styled(motion.ul)`
   display: flex;
   flex-direction: column;
   margin-left: 3rem;
@@ -82,6 +82,7 @@ export const TaskList = styled.ul`
     width: 270px;
     padding-left: 0px;
     margin-left: 1rem;
+    transform-origin: top;
   }
 `;
 

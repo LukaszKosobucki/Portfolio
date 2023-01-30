@@ -74,6 +74,15 @@ export const ParagraphLarge = styled.div`
   font-weight: ${typography.paragraphLarge.fontWeight};
   line-height: ${typography.paragraphLarge.lineHeight};
 `;
+export const ButtonTransparent = styled.button`
+  border: none;
+  background-color: transparent;
+  &:active,
+  &:hover {
+    border: none;
+    background-color: transparent;
+  }
+`;
 
 export const GlobalStyle = createGlobalStyle`
     * {

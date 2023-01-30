@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import {
+  ButtonTransparent,
   Heading1,
   Heading3,
   Heading5,
@@ -74,6 +75,13 @@ const About = () => {
         </ImagesContainer>
         {globalServices.matches ? (
           <TextContainer>
+            <ButtonTransparent onClick={() => setIsReading(!isReading)}>
+              {!isReading ? (
+                <ParagraphBase>Read more About me</ParagraphBase>
+              ) : (
+                <ParagraphBase>Read less About me</ParagraphBase>
+              )}
+            </ButtonTransparent>
             <AnimatePresence>
               {isReading && (
                 <motion.div
@@ -109,9 +117,6 @@ const About = () => {
                 </motion.div>
               )}
             </AnimatePresence>
-            <button onClick={() => setIsReading(!isReading)}>
-              {!isReading ? "Read more About me" : "Read less About me"}
-            </button>
           </TextContainer>
         ) : (
           <TextContainer
