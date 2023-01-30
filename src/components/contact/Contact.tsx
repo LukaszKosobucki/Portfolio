@@ -1,4 +1,6 @@
-import { Heading1, Heading5 } from "../../global.styled";
+import { useContext } from "react";
+import { Heading1, Heading3, Heading5 } from "../../global.styled";
+import { GlobalStateContext } from "../../utils/ContextWrapper";
 import { ContactInfoContainer, Heading1Container } from "../about/About.styled";
 import { FooterInfoBlock, IconBlock } from "../layout/Footer.styled";
 import {
@@ -8,6 +10,7 @@ import {
 } from "./Contact.styled";
 
 const Contact = () => {
+  const globalServices = useContext(GlobalStateContext);
   return (
     <ContactSectionContainer id="contact">
       <Heading1Container
@@ -15,7 +18,11 @@ const Contact = () => {
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
       >
-        <Heading1>Contact</Heading1>
+        {globalServices.matches ? (
+          <Heading3>Contact</Heading3>
+        ) : (
+          <Heading1>Contact</Heading1>
+        )}
       </Heading1Container>
 
       <ContactInfo

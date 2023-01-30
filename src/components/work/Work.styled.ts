@@ -94,6 +94,10 @@ export const IconBlockWork = styled(IconBlock)`
 export const IconsContainer = styled.div`
   display: flex;
   flex-direction: row;
+  gap: 3px;
+  @media (max-width: 600px) {
+    margin-left: 1rem;
+  }
 `;
 
 export const PhotoAnchor = styled.a`

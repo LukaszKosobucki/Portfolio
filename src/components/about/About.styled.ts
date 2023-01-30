@@ -22,6 +22,9 @@ export const SectionContainer = styled.div`
   align-items: center;
   margin-bottom: 4rem;
   gap: 1rem;
+  @media (max-width: 600px) {
+    scroll-margin-top: 6.5rem;
+  }
 `;
 
 export const ContentContainer = styled.div`
