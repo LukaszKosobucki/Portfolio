@@ -17,7 +17,6 @@ export const GlobalStateProvider = ({ children }: IChildren) => {
   );
 
   useEffect(() => {
-    console.log(matches);
     window
       .matchMedia("(max-width: 600px)")
       .addEventListener("change", (e) => setMatches(e.matches));
